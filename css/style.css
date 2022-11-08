@@ -55,52 +55,47 @@ header nav{
     margin: 40px;
 }
 
-
-.productos h2{
-    text-align: center;
-    margin: 40px;
-}
-
-.productos > div{
+.productos-ofrecidos {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 30px;
 }
 
-.productos div div{
-    width: 300px;
-    height: 320px;
-    border: 3px solid gainsboro;
-    text-align:center;
-    margin: 20px;
-    background-color: whitesmoke;
-    font-size: 15px;
-    cursor: default;
-    transition: all 400ms ease;
-    box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+.card {
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial;
+    padding: 25px;
 }
 
-.productos div div:hover{
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
-    transform: translateY(-3%);
+
+.card > img{
+    width: 100%;
+    height: 250px;
 }
 
-.productos div img{
-    width: 293px;
-    height: 200px;
-    margin-bottom: 10px;
+.valor {
+    color: rgb(105, 105, 105);
+    font-size: 18px;
 }
 
-.productos div div a{
-    text-decoration: none;
-    background-color: #7e79dd;
-    padding: 5px;
-    color:whitesmoke;
-    border-radius: 2px;
+.card button {
+    border: 10px;
+    padding: 12px;
+    color: white;
+    background-color: rgb(3, 3, 83);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
 }
 
-.productos div div a:hover{
-    background-color: #5150a9;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+.card button:hover {
+    opacity: 0.7;
 }
-
