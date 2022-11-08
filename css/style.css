@@ -17,6 +17,7 @@ header nav{
 .nav-link{
     font-size: 15px;
     color: black;
+    text-align: center;
 }
 
 .logo{
