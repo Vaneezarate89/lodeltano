@@ -133,7 +133,7 @@ const eliminarProducto = () =>{
     carrito= carrito.filter((carritoId) =>{
         return carritoId !== foundId;
     });
-
+    guardado();
     elegirCarrito();
 };
 
