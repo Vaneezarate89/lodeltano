@@ -64,6 +64,7 @@ header nav{
     margin-left: 80px;
     margin-right: 80px;
     padding: 30px;
+    font-size: 15px;
 }
 
 .card {
@@ -75,6 +76,10 @@ header nav{
     padding: 25px;
 }
 
+.card h3{
+    font-size: 15px;
+    margin: 10px;
+}
 
 .card > img{
     width: 100%;
@@ -99,4 +104,72 @@ header nav{
 
 .card button:hover {
     opacity: 0.7;
+}
+
+.modal-container{
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: white;
+    background-color:rgb(3, 3, 83); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+    font-size: 15px;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(4, 4, 110, 0.855);;
+    color: white;
+    width: 100%;
+}
+
+.modal-header-title{
+    justify-self: start;
+    font-size: 18px;
+    margin: 15px;
+}
+
+.modal-container > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.modal-container > div > img {
+    height: 120px;
+    width: 120px;
+}
+
+.modal-content img{
+    width: 55px;
+    height: 55px;
+}
+
+.total-content{
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.modal-header-button{
+    font-size: 12px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.borrar{
+    cursor: pointer;
 }
