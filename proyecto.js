@@ -150,3 +150,51 @@ const guardado = () =>{
 
 JSON.parse(localStorage.getItem("carrito"));
 
+
+let api_key = "8ec2d2ccd6a71ed2b32ba11beafe4215";
+
+
+navigator.geolocation.getCurrentPosition(showPosition)
+
+
+function showPosition(position){
+
+
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+
+    let ubicacion = document.getElementById('ubicacion')
+    let iconoAnimado= document.getElementById('iconoAnimado')
+
+    fetch("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&lang=es&units=metric&appid="+api_key)
+        .then(response=>response.json())
+        .then(data=>{
+            ubicacion.textContent = data.name 
+
+            switch (data.weather[0].main) {
+                case 'Thunderstorm':
+                    iconoAnimado.src='animated/thunder.svg'
+                    console.log('TORMENTA');
+                break;
+                case 'Drizzle':
+                iconoAnimado.src='animated/rainy-2.svg'
+                console.log('LLOVIZNA');
+                break;
+                case 'Rain':
+                    iconoAnimado.src='animated/rainy-7.svg'
+                    console.log('LLUVIA');
+                break;
+                case 'Clear': 
+                    iconoAnimado.src='animated/day.svg'
+                    console.log('LIMPIO');
+                break;
+                case 'Clouds':
+                    iconoAnimado.src='animated/cloudy-day-1.svg'
+                    console.log('NUBES');
+                break;  
+                default:
+                iconoAnimado.src='animated/cloudy-day-1.svg'
+                console.log('por defecto');
+            }
+    })
+}
