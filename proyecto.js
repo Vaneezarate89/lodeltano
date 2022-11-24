@@ -52,7 +52,13 @@ productos.forEach((product) =>{
     content.append(comprar);
 
     comprar.addEventListener("click", ()=>{
-
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Su producto se agrego al carrito',
+            showConfirmButton: false,
+            timer: 1500
+        })
     const repeat = carrito.some((repetir)=> repetir.id === product.id);
     if (repeat){
         carrito.map((prod)=>{
